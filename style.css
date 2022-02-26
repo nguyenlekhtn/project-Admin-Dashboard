@@ -4,26 +4,100 @@
 }
 
 :root {
-  --blue: #1992d4;
-  --yellow: #facc15;
-  --lightgrey: #e2e8f0;
+  --clr-bg-important: #1992d4;
+  --clr-accent: #facc15;
+  --clr-bg-secondary: #e2e8f0;
+  --clr-bg-primary: #fff;
+
+
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Source Sans Pro', sans-serif;
+
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .container {
-  min-height: 100vh;
+  height: 100vh;
+  max-width: 1400px;
+  overflow-y: hidden;
 
   display: grid;
   grid-template-areas: 
     "sidebar header"
     "sidebar main";
-  grid-template-columns: minmax(200px, 1fr) 4fr; 
+  grid-template-columns: minmax(250px, 1fr) 4fr; 
   grid-template-rows: 200px 1fr;
 
 }
 
 .header {
   grid-area: header;
+  padding: 15px 30px;
 
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  gap: 10px 20px;
+}
+
+.search-box {
+  display: flex;
+  gap: 1rem;
+}
+
+.user-control {
+  justify-self: end;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+}
+
+.icon-noti {
+  width: 20px;
+}
+
+.user-control .user-name {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.user-avatar {
+  border-radius: 50%;
+  background-color: var(--clr-accent);
+
+}
+
+.user-avatar-small {
+  width: 40px;
+  height: 40px;
+ 
+}
+
+.user-avatar-main {
+  width: 80px;
+  height: 80px;
+}
+
+
+input[type="search"] {
+  flex: 1;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--clr-bg-secondary);
+  padding: 0.25em 1em;
 }
 
 .main {
@@ -35,5 +109,30 @@
 .sidebar {
   grid-area: sidebar;
 
-  background-color: var(--blue);
+  background-color: var(--clr-bg-important);
+  padding: 10px;
+  color: var(--clr-bg-primary);
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+
+.item__sidebar {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 0.8em;
+  align-items: center;
+}
+
+.sidebar img {
+  filter: invert(99%) sepia(41%) saturate(0%) hue-rotate(336deg) brightness(114%) contrast(100%);
+  justify-self: center;
+}
+
+.sidebar_logo {
+  width: 100%;
 }

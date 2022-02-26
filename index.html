@@ -5,22 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <header class="header">
       <div class="search-box">
-        <img src="" alt="" class="search-icon">
+        <img src="./assets/magnify.svg" alt="" class="search-icon">
         <input type="search" name="search" id="search">
       </div>
       <div class="user-control">
-        <img src="./assets/bell-ring.svg" alt="Bell Ring">
+        <img src="./assets/bell-ring.svg" alt="Bell Ring" class="icon-noti">
         <div class="user-avatar user-avatar-small"></div>
-        <div class="user-name"></div>
+        <div class="user-name">Le Nguyen</div>
       </div>
       <div class="user-info">
-        <div class="user-avatar user-avatar-small"></div>
+        <div class="user-avatar user-avatar-main"></div>
         <div class="user-greet">
           <span class="greet-text">Hi there,</span>
           <span class="user-name">Le Nguyen(@nguyenlekhtn)</span>
@@ -226,52 +230,32 @@
       </div>
     </main>
     <aside class="sidebar">
-      <div class="top__sidebar">
+      <div class="top__sidebar item__sidebar">
         <img src="./assets/view-dashboard.svg" alt="sibebar logo" class="sidebar_logo">
         <div class="sidebar-title">Dashboard</div>
       </div>
-      <nav class="nav">
-        <ul class="menu__nav">
-          <li class="item__nav">
-            <img src="./assets/home.svg" alt="">
-            <a href="" class="link_nav">Home</a>
-          </li>
-          <li class="item__nav">
-            <img src="./assets/card-account-details-outline.svg" alt="">
-            <a href="" class="link_nav">Profile</a>
-          </li>
-          <li class="item__nav">
-            <img src="./assets/message.svg" alt="">
-            <a href="" class="link_nav">Messages</a>
-          </li>
-          <li class="item__nav">
-            <img src="./assets/history.svg" alt="">
-            <a href="" class="link_nav">History</a>
-          </li>
-          <li class="item__nav">
-            <img src="./assets/note-check.svg" alt="">
-            <a href="" class="link_nav">Tasks</a>
-          </li>
-          <li class="item__nav">
-            <img src="./assets/account-group.svg" alt="">
-            <a href="" class="link_nav">Communities</a>
-          </li>
-        </ul>
-        <ul class="menu__nav">
-          <li class="item__nav">
-            <img src="./assets/cog.svg" alt="">
-            <a href="" class="link_nav">Settings</a>
-          </li>
-          <li class="item__nav">
-            <img src="./assets/lifebuoy.svg" alt="">
-            <a href="" class="link_nav">Support</a>
-          </li>
-          <li class="item__nav">
-            <img src="./assets/shield-check.svg" alt="">
-            <a href="" class="link_nav">Privacy</a>
-          </li>
-        </ul>
-      </nav>
+      <divc class="item__sidebar">
+        <img src="./assets/home.svg" alt="">
+        <a href="" class="link_nav">Home</a>
+        <img src="./assets/card-account-details-outline.svg" alt="">
+        <a href="" class="link_nav">Profile</a>
+        <img src="./assets/message.svg" alt="">
+        <a href="" class="link_nav">Messages</a>
+        <img src="./assets/history.svg" alt="">
+        <a href="" class="link_nav">History</a>
+        <img src="./assets/note-check.svg" alt="">
+        <a href="" class="link_nav">Tasks</a>
+        <img src="./assets/account-group.svg" alt="">
+        <a href="" class="link_nav">Communities</a>
+      </divc>
+      <div class="item__sidebar">
+        <img src="./assets/cog.svg" alt="">
+        <a href="" class="link_nav">Settings</a>
+        <img src="./assets/lifebuoy.svg" alt="">
+        <a href="" class="link_nav">Support</a>
+        <img src="./assets/shield-check.svg" alt="">
+        <a href="" class="link_nav">Privacy</a>
+      </div>
     </aside>
   </div>
 </body>
