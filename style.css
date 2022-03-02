@@ -9,6 +9,7 @@
   --clr-accent: #facc15;
   --clr-bg-secondary: #e2e8f0;
   --clr-bg-primary: #fff;
+  --clr-fg-secondary: #636363;
 
 
   font-size: 10px;
@@ -25,6 +26,10 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.body {
+  color: var(--clr-fg-secondary);
 }
 
 .container {
@@ -46,7 +51,7 @@ a {
 
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
   align-items: center;
   gap: 10px 20px;
 }
@@ -84,8 +89,7 @@ input[type="search"] {
 }
 
 .user-info {
-  display: grid;
-  grid-template-columns: min-content 1fr;
+  display: flex;
   gap: 15px;
   align-items: center;
 }
@@ -108,6 +112,7 @@ input[type="search"] {
 }
 
 .user-greet {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -196,7 +201,7 @@ input[type="search"] {
     "projects annoucements"
     "projects trending"
   ;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr minmax(0, 1fr);
   grid-template-rows: minmax(0,1fr) minmax(0,1fr);;
   gap: 30px 24px;
 }
@@ -278,17 +283,33 @@ input[type="search"] {
 }
 
 .list__annoucements {
+  flex: 1 1 0;
   background-color: var(--clr-bg-primary);
-  padding: 32px 24px;
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  padding: 0px 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .annoucement  {
-  font-size: 1.2rem;
-  padding: 12px 0px;
-  height: 100px;
-  overflow: hidden;
+  font-size: 1.1rem;
+  padding: 15px 5px;
+  /* min-height: 0;
+  max-height: 80px; */
+  /* height: 100%; */
+  /* overflow: hidden; */
+
+  display: flex;
+  flex-direction: column;
+}
+
+.annoucement:first-child {
+  padding-top: 0;
+}
+
+.annoucement:last-child {
+  padding-bottom: 0;
 }
 
 .annoucement + .annoucement {
@@ -297,12 +318,14 @@ input[type="search"] {
 
 .annoucement > .title {
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 5px;
 }
 
 .annoucement > .body {
-  overflow: hidden;
+  flex: 1 1 0;
+  
+  color:#777
 }
 
 .trending {
