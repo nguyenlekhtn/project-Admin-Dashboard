@@ -331,7 +331,7 @@ input[type="search"] {
 .list__annoucements {
   flex: 1 1 0;
   background-color: var(--clr-bg-primary);
-  padding: 0px 24px;
+  padding: 8px 24px;
 
   display: flex;
   flex-direction: column;
