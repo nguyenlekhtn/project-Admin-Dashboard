@@ -35,8 +35,9 @@ a {
   color: inherit;
 }
 
-img {
-  max-width: 60%;
+.user-avatar > img {
+  max-width: 70%;
+  cursor: pointer;
 }
 
 .user-avatar {
@@ -85,7 +86,9 @@ input[type="search"] {
   border: none;
   border-radius: 1em;
   background-color: var(--clr-bg-secondary);
-  padding: 5px 12px;
+  padding: 8px 12px;
+
+  color: inherit;
 }
 
 
@@ -94,7 +97,7 @@ input[type="search"] {
 
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
 
 }
 
@@ -105,6 +108,16 @@ input[type="search"] {
 .user-control .user-name {
   font-weight: 700;
   font-size: 2rem;
+}
+
+.bell-ring-ctn {
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.bell-ring-ctn:hover, .bell-ring-ctn:active {
+  background-color: #e6e6e6;
 }
 
 .user-info {
@@ -170,7 +183,16 @@ input[type="search"] {
 
   font-weight: 700;
   font-size: 1.4rem;
-  color: var(--clr-bg-primary)
+  color: var(--clr-bg-primary);
+  cursor: pointer;
+}
+
+.btn-header:hover {
+  background: #157db6;
+}
+
+.btn-header:active {
+  background: #126897;
 }
 
 .sidebar {
@@ -291,6 +313,11 @@ input[type="search"] {
   border: none;
   padding: 5px;
   background-color: inherit;
+  border-radius: 50%;
+}
+
+.card-btn:hover, .card-btn:active {
+  background-color: #e6e6e6;
 }
 
 .card-btn > .card-btn {
