@@ -20,9 +20,6 @@
 body {
   font-size: 1.6rem;
   font-family: 'Roboto', sans-serif;
-
-  display: flex;
-  justify-content: center;
 }
 
 .main-content {
@@ -51,8 +48,11 @@ a {
 }
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
+  margin: 0 auto;
   max-width: 1400px;
+  min-width: 900px;
+
 
   display: grid;
   grid-template-areas: 
@@ -243,7 +243,7 @@ input[type="search"] {
     "projects annoucements"
     "projects trending"
   ;
-  grid-template-columns: 3fr minmax(0, 1fr);
+  grid-template-columns: minmax(660px, 3fr) minmax(200px, 1fr);
   grid-template-rows: minmax(0,1fr) minmax(0,1fr);;
   gap: 36px 24px;
 }
@@ -396,6 +396,19 @@ input[type="search"] {
 .item_trending {
   display: flex;
   gap: 18px;
+}
+
+.item_trending:nth-child(1) > .user-avatar {
+  background-color: #a3e635;
+}
+
+.item_trending:nth-child(3) > .user-avatar {
+  background-color: #a3e635;
+}
+
+.item_trending:nth-child(4) > .user-avatar {
+  background-color: #22d3ee
+  ;
 }
 
 .trending-text {
